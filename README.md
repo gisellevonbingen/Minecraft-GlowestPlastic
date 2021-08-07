@@ -6,3 +6,11 @@ Add glow plastic blocks(stairs, slabs) that's light level is 15
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 
 https://www.curseforge.com/minecraft/mc-mods/mekanism-additions
+
+# Licence
+
+MIT and while 'Mekanism' allows
+
+# Modpacks
+
+Can use in modpacks under licence
