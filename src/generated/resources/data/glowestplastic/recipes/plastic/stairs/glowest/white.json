@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowestplastic:white_plastic_glowest"
+    }
+  },
+  "result": {
+    "item": "glowestplastic:white_plastic_glow_stairs",
+    "count": 4
+  }
+}

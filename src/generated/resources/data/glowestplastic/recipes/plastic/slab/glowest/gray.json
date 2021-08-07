@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowestplastic:gray_plastic_glowest"
+    }
+  },
+  "result": {
+    "item": "glowestplastic:gray_plastic_glow_slab",
+    "count": 6
+  }
+}

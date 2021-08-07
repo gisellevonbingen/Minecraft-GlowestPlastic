@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#D#",
+    " # "
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:dyes/white"
+    },
+    "#": {
+      "tag": "forge:stairs/plastic/glowest"
+    }
+  },
+  "result": {
+    "item": "glowestplastic:white_plastic_glow_stairs",
+    "count": 4
+  }
+}

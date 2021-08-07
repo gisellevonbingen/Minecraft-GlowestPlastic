@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mekanismadditions:yellow_plastic_glow"
+    },
+    {
+      "item": "mekanismadditions:yellow_plastic_glow"
+    },
+    {
+      "item": "mekanismadditions:yellow_plastic_glow"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "result": {
+    "item": "glowestplastic:yellow_plastic_glowest",
+    "count": 3
+  }
+}

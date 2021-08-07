@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mekanismadditions:purple_plastic_glow"
+    },
+    {
+      "item": "mekanismadditions:purple_plastic_glow"
+    },
+    {
+      "item": "mekanismadditions:purple_plastic_glow"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "result": {
+    "item": "glowestplastic:purple_plastic_glowest",
+    "count": 3
+  }
+}
