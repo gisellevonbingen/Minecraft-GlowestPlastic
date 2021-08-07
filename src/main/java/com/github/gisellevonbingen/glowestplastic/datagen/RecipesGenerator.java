@@ -37,7 +37,7 @@ public class RecipesGenerator extends RecipeProvider
 				continue;
 			}
 
-			this.buildGlowestBlocks(color, consumer, "plastic/glowest/", "_plastic_glow");
+			this.buildGlowestBlocks(color, consumer, "plastic/glowest/");
 			this.buildGlowestStairs(color, consumer, "plastic/stairs/glowest/");
 			this.buildGlowestSlab(color, consumer, "plastic/slab/glowest/");
 		}
@@ -69,9 +69,9 @@ public class RecipesGenerator extends RecipeProvider
 	}
 
 	@SuppressWarnings("deprecation")
-	public <B extends Block, I extends BlockItem> void buildGlowestBlocks(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix, String glowNameSuffix)
+	public <B extends Block, I extends BlockItem> void buildGlowestBlocks(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix)
 	{
-		BlockItem glow = (BlockItem) Registry.ITEM.get(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + glowNameSuffix));
+		BlockItem glow = (BlockItem) Registry.ITEM.get(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic_glow"));
 		BlockItem glowest = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getItem();
 		this.buildRecolor(namePrefix, GlowestPlasticTags.Items.PLASTIC_BLOCKS_GLOWEST, glowest, color, consumer);
 
