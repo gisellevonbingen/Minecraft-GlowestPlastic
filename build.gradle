@@ -12,7 +12,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.16.5-1.0'
-group = 'com.github.gisellevonbingen.glowestplastic'
+group = 'com.github.gisellevonbingen'
 archivesBaseName = 'GlowestPlastic'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
