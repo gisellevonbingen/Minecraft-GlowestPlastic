@@ -1,6 +1,6 @@
 package com.github.gisellevonbingen.glowestplastic.datagen;
 
-import com.github.gisellevonbingen.glowestplastic.util.ExistingFileHelperExtensions;
+import java.util.HashSet;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -15,7 +15,7 @@ public class DataGenerators
 	public static void gatherData(GatherDataEvent event)
 	{
 		DataGenerator generator = event.getGenerator();
-		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+		ExistingFileHelper existingFileHelper = new ExistingFileHelper(new HashSet<>(), new HashSet<>(), false, null, null);
 
 		if (event.includeServer())
 		{
@@ -29,7 +29,6 @@ public class DataGenerators
 
 		if (event.includeClient())
 		{
-			ExistingFileHelperExtensions.setEnabled(existingFileHelper, false);
 			generator.addProvider(new BlocksModelGenerator(generator, existingFileHelper));
 			generator.addProvider(new BlocksStateGenerator(generator, existingFileHelper));
 			generator.addProvider(new ItemsModelGenerator(generator, existingFileHelper));
