@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#glowestplastic:plastic_blocks/glowest",
+    "#forge:stairs/plastic/glowest",
+    "#forge:slabs/plastic/glowest"
+  ]
+}
