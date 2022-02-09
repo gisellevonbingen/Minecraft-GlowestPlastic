@@ -1,9 +1,9 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="All rights reserved"
+license="MIT License"
 [[mods]]
 modId="glowestplastic"
-version="1.16.5-1.0"
+version="${file.jarVersion}"
 displayName="Glowest Plastic"
 credits="gisellevonbingen"
 authors="gisellevonbingen"
@@ -34,4 +34,3 @@ Add glow plastic blocks(stairs, slabs) that's light level is 15
     mandatory=true
     ordering="AFTER"
     side="BOTH"
-    
