@@ -1,7 +1,6 @@
-package com.github.gisellevonbingen.glowestplastic.common.tag;
+package gisellevonbingen.glowestplastic.common.tag;
 
-import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
-
+import gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.tags.BlockTags;

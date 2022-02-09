@@ -1,12 +1,12 @@
-package com.github.gisellevonbingen.glowestplastic.common.block;
+package gisellevonbingen.glowestplastic.common.block;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.UnaryOperator;
 
-import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.google.common.base.Function;
 
+import gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import mekanism.additions.common.block.plastic.BlockPlastic;
 import mekanism.additions.common.block.plastic.BlockPlasticSlab;
 import mekanism.additions.common.block.plastic.BlockPlasticStairs;

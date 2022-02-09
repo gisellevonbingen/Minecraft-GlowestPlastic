@@ -1,12 +1,11 @@
-package com.github.gisellevonbingen.glowestplastic.common;
+package gisellevonbingen.glowestplastic.common;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.github.gisellevonbingen.glowestplastic.client.ClientHandler;
-import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
-import com.github.gisellevonbingen.glowestplastic.common.datagen.DataGenerators;
-
+import gisellevonbingen.glowestplastic.client.ClientHandler;
+import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
+import gisellevonbingen.glowestplastic.common.datagen.DataGenerators;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;

@@ -1,10 +1,9 @@
-package com.github.gisellevonbingen.glowestplastic.common.datagen;
+package gisellevonbingen.glowestplastic.common.datagen;
 
 import java.util.Map;
 
-import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
-import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
-
+import gisellevonbingen.glowestplastic.common.GlowestPlastic;
+import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import mekanism.api.providers.IBlockProvider;
 import mekanism.api.text.EnumColor;
 import net.minecraft.data.DataGenerator;

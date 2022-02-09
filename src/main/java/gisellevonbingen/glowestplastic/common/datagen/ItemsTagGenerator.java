@@ -1,8 +1,7 @@
-package com.github.gisellevonbingen.glowestplastic.common.datagen;
+package gisellevonbingen.glowestplastic.common.datagen;
 
-import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
-import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
-
+import gisellevonbingen.glowestplastic.common.GlowestPlastic;
+import gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 import mekanism.additions.common.AdditionsTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;

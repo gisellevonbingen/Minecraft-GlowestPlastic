@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.glowestplastic.common.util;
+package gisellevonbingen.glowestplastic.common.util;
 
 import java.util.Objects;
 import java.util.function.Function;

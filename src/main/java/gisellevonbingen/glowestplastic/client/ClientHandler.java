@@ -1,11 +1,10 @@
-package com.github.gisellevonbingen.glowestplastic.client;
+package gisellevonbingen.glowestplastic.client;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
-
+import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import mekanism.api.text.EnumColor;
 import mekanism.client.ClientRegistrationUtil;
 import mekanism.common.registration.impl.BlockRegistryObject;

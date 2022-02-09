@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.glowestplastic.common.datagen;
+package gisellevonbingen.glowestplastic.common.datagen;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,9 +1,8 @@
-package com.github.gisellevonbingen.glowestplastic.common.datagen;
+package gisellevonbingen.glowestplastic.common.datagen;
 
-import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
-import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
-import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
-
+import gisellevonbingen.glowestplastic.common.GlowestPlastic;
+import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
+import gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 import mekanism.additions.common.AdditionsTags;
 import mekanism.api.text.EnumColor;
 import net.minecraft.block.Block;
