@@ -104,9 +104,8 @@ dependencies {
     implementation fg.deobf("curse.maven:hwyla-253449:${hwyla_file}")
 
 	// Mekanism
-    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
+    implementation fg.deobf("mekanism:Mekanism:${mekanism_version}")
+    implementation fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
     runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
 
