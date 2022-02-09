@@ -92,9 +92,6 @@ dependencies {
     // Mixin
     annotationProcessor "org.spongepowered:mixin:0.8:processor"
 
-    // Space-BossTools
-    implementation fg.deobf("net.mrscauthd:boss_tools:${mc_version}-${boss_tools_version}")
-
     // Recipe
     // REI
     // compileOnly fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:${rei_version}")
