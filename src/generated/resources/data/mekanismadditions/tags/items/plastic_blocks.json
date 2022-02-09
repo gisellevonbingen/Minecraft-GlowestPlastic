@@ -1,23 +1,6 @@
 {
   "replace": false,
   "values": [
-    "glowestplastic:black_plastic_glowest",
-    "glowestplastic:blue_plastic_glowest",
-    "glowestplastic:green_plastic_glowest",
-    "glowestplastic:cyan_plastic_glowest",
-    "glowestplastic:dark_red_plastic_glowest",
-    "glowestplastic:purple_plastic_glowest",
-    "glowestplastic:orange_plastic_glowest",
-    "glowestplastic:light_gray_plastic_glowest",
-    "glowestplastic:gray_plastic_glowest",
-    "glowestplastic:light_blue_plastic_glowest",
-    "glowestplastic:lime_plastic_glowest",
-    "glowestplastic:aqua_plastic_glowest",
-    "glowestplastic:red_plastic_glowest",
-    "glowestplastic:magenta_plastic_glowest",
-    "glowestplastic:yellow_plastic_glowest",
-    "glowestplastic:white_plastic_glowest",
-    "glowestplastic:brown_plastic_glowest",
-    "glowestplastic:pink_plastic_glowest"
+    "#glowestplastic:plastic_blocks/glowest"
   ]
 }

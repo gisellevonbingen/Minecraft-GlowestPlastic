@@ -1,6 +1,6 @@
-package com.github.gisellevonbingen.glowestplastic.datagen;
+package com.github.gisellevonbingen.glowestplastic.common.datagen;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockModelProvider;

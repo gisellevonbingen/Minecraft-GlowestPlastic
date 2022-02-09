@@ -1,6 +1,6 @@
-package com.github.gisellevonbingen.glowestplastic.datagen;
+package com.github.gisellevonbingen.glowestplastic.common.datagen;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 
@@ -31,9 +31,9 @@ public class BlocksTagGenerator extends BlockTagsProvider
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getBlock();
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST).add(block);
-			this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS).add(block);
 		}
 
+		this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS).addTag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST);
 	}
 
 	public void tagPlasticGlowestStairs()
@@ -41,10 +41,10 @@ public class BlocksTagGenerator extends BlockTagsProvider
 		for (EnumColor color : EnumColor.values())
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_STAIRS.get(color).getBlock();
-			this.tag(GlowestPlasticTags.Blocks.STAIRS).add(block);
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST).add(block);
 		}
 
+		this.tag(GlowestPlasticTags.Blocks.STAIRS).addTag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST);
 	}
 
 	public void tagPlasticGlowestSlabs()
@@ -53,9 +53,9 @@ public class BlocksTagGenerator extends BlockTagsProvider
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.get(color).getBlock();
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST).add(block);
-			this.tag(GlowestPlasticTags.Blocks.SLABS).add(block);
 		}
 
+		this.tag(GlowestPlasticTags.Blocks.SLABS).addTag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST);
 	}
 
 }

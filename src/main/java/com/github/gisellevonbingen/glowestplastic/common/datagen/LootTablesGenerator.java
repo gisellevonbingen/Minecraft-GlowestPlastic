@@ -1,4 +1,4 @@
-package com.github.gisellevonbingen.glowestplastic.datagen;
+package com.github.gisellevonbingen.glowestplastic.common.datagen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.mojang.datafixers.util.Pair;
 
 import net.minecraft.data.DataGenerator;

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.UnaryOperator;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.google.common.base.Function;
 
 import mekanism.additions.common.block.plastic.BlockPlastic;

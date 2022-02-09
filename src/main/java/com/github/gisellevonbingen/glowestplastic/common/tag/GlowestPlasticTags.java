@@ -1,6 +1,6 @@
 package com.github.gisellevonbingen.glowestplastic.common.tag;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 
 import mekanism.additions.common.AdditionsTags;
 import net.minecraft.block.Block;

@@ -1,8 +1,8 @@
-package com.github.gisellevonbingen.glowestplastic.datagen;
+package com.github.gisellevonbingen.glowestplastic.common.datagen;
 
 import java.util.function.Consumer;
 
-import com.github.gisellevonbingen.glowestplastic.GlowestPlastic;
+import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 
@@ -17,8 +17,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class RecipesGenerator extends RecipeProvider
 {
@@ -32,7 +32,7 @@ public class RecipesGenerator extends RecipeProvider
 	{
 		for (EnumColor color : EnumColor.values())
 		{
-			if (color.hasDyeName() == false)
+			if (color.getDyeColor() == null)
 			{
 				continue;
 			}
@@ -68,12 +68,11 @@ public class RecipesGenerator extends RecipeProvider
 		consumer.accept(shapeBuilder.getResult());
 	}
 
-	@SuppressWarnings("deprecation")
 	public <B extends Block, I extends BlockItem> void buildGlowestBlocks(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix)
 	{
 		Ingredient dustGlowStone = Ingredient.of(Tags.Items.DUSTS_GLOWSTONE);
-		BlockItem normal = (BlockItem) Registry.ITEM.get(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic"));
-		BlockItem glow = (BlockItem) Registry.ITEM.get(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic_glow"));
+		BlockItem normal = (BlockItem) ForgeRegistries.ITEMS.getValue(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic"));
+		BlockItem glow = (BlockItem) ForgeRegistries.ITEMS.getValue(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic_glow"));
 		BlockItem glowest = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getItem();
 		this.buildRecolor(namePrefix, GlowestPlasticTags.Items.PLASTIC_BLOCKS_GLOWEST, glowest, color, consumer);
 
@@ -95,7 +94,7 @@ public class RecipesGenerator extends RecipeProvider
 		ShapedRecipeBuilder builder = new ShapedRecipeBuilder(this.getRecipeName(namePrefix + "recolor/" + color.getRegistryPrefix()));
 		builder.addPattern(" # ", "#D#", " # ");
 		builder.addKey('#', Ingredient.of(tagInput));
-		builder.addKey('D', Ingredient.of(color.getDyeTag()));
+		builder.addKey('D', Ingredient.of(color.getDyeColor().getTag()));
 		builder.setOutput(itemOutput, 4);
 		consumer.accept(builder.getResult());
 	}
