@@ -7,15 +7,15 @@ import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 import mekanism.additions.common.MekanismAdditions;
 import mekanism.api.text.EnumColor;
-import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -27,7 +27,7 @@ public class RecipesGenerator extends RecipeProvider
 	}
 
 	@Override
-	protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
 	{
 		for (EnumColor color : EnumColor.values())
 		{
@@ -43,10 +43,10 @@ public class RecipesGenerator extends RecipeProvider
 
 	}
 
-	public <B extends Block, I extends BlockItem> void buildGlowestSlab(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix)
+	public <B extends Block, I extends BlockItem> void buildGlowestSlab(EnumColor color, Consumer<FinishedRecipe> consumer, String namePrefix)
 	{
-		BlockItem block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getItem();
-		BlockItem slab = GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.get(color).getItem();
+		BlockItem block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).asItem();
+		BlockItem slab = GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.get(color).asItem();
 		this.buildRecolor(namePrefix, GlowestPlasticTags.Items.PLASTIC_SLABS_GLOWEST, slab, color, consumer);
 
 		ShapedRecipeBuilder shapeBuilder = new ShapedRecipeBuilder(this.getRecipeName(namePrefix + color.getRegistryPrefix()));
@@ -55,10 +55,10 @@ public class RecipesGenerator extends RecipeProvider
 		consumer.accept(shapeBuilder.getResult());
 	}
 
-	public <B extends Block, I extends BlockItem> void buildGlowestStairs(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix)
+	public <B extends Block, I extends BlockItem> void buildGlowestStairs(EnumColor color, Consumer<FinishedRecipe> consumer, String namePrefix)
 	{
-		BlockItem block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getItem();
-		BlockItem stairs = GlowestPlasticBlocks.PLASTIC_GLOWEST_STAIRS.get(color).getItem();
+		BlockItem block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).asItem();
+		BlockItem stairs = GlowestPlasticBlocks.PLASTIC_GLOWEST_STAIRS.get(color).asItem();
 		this.buildRecolor(namePrefix, GlowestPlasticTags.Items.PLASTIC_STAIRS_GLOWEST, stairs, color, consumer);
 
 		ShapedRecipeBuilder shapeBuilder = new ShapedRecipeBuilder(this.getRecipeName(namePrefix + color.getRegistryPrefix()));
@@ -67,12 +67,12 @@ public class RecipesGenerator extends RecipeProvider
 		consumer.accept(shapeBuilder.getResult());
 	}
 
-	public <B extends Block, I extends BlockItem> void buildGlowestBlocks(EnumColor color, Consumer<IFinishedRecipe> consumer, String namePrefix)
+	public <B extends Block, I extends BlockItem> void buildGlowestBlocks(EnumColor color, Consumer<FinishedRecipe> consumer, String namePrefix)
 	{
 		Ingredient dustGlowStone = Ingredient.of(Tags.Items.DUSTS_GLOWSTONE);
 		BlockItem normal = (BlockItem) ForgeRegistries.ITEMS.getValue(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic"));
 		BlockItem glow = (BlockItem) ForgeRegistries.ITEMS.getValue(new ResourceLocation(MekanismAdditions.MODID, color.getRegistryPrefix() + "_plastic_glow"));
-		BlockItem glowest = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getItem();
+		BlockItem glowest = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).asItem();
 		this.buildRecolor(namePrefix, GlowestPlasticTags.Items.PLASTIC_BLOCKS_GLOWEST, glowest, color, consumer);
 
 		int normalCount = 3;
@@ -88,7 +88,7 @@ public class RecipesGenerator extends RecipeProvider
 		consumer.accept(moreGlowBuilder.getResult());
 	}
 
-	public void buildRecolor(String namePrefix, ITag<Item> tagInput, BlockItem itemOutput, EnumColor color, Consumer<IFinishedRecipe> consumer)
+	public void buildRecolor(String namePrefix, Tag<Item> tagInput, BlockItem itemOutput, EnumColor color, Consumer<FinishedRecipe> consumer)
 	{
 		ShapedRecipeBuilder builder = new ShapedRecipeBuilder(this.getRecipeName(namePrefix + "recolor/" + color.getRegistryPrefix()));
 		builder.addPattern(" # ", "#D#", " # ");

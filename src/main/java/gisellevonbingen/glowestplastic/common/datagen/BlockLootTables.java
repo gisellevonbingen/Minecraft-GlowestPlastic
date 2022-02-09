@@ -8,11 +8,11 @@ import com.google.common.base.Function;
 import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import mekanism.api.providers.IBlockProvider;
 import mekanism.common.registration.impl.BlockRegistryObject;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.loot.LootTable;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
 
-public class BlockLootTables extends net.minecraft.data.loot.BlockLootTables
+public class BlockLootTables extends net.minecraft.data.loot.BlockLoot
 {
 	public BlockLootTables()
 	{

@@ -8,14 +8,14 @@ import mekanism.additions.common.MekanismAdditions;
 import mekanism.additions.common.block.plastic.BlockPlasticStairs;
 import mekanism.api.providers.IBlockProvider;
 import mekanism.common.registration.impl.BlockRegistryObject;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.state.properties.Half;
-import net.minecraft.state.properties.SlabType;
-import net.minecraft.state.properties.StairsShape;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.state.properties.Half;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -49,9 +49,9 @@ public class BlocksStateGenerator extends BlockStateProvider
 			BlockPlasticStairs block = stair.getBlock();
 			this.getVariantBuilder(block).forAllStatesExcept(state ->
 			{
-				Direction facing = state.getValue(StairsBlock.FACING);
-				Half half = state.getValue(StairsBlock.HALF);
-				StairsShape shape = state.getValue(StairsBlock.SHAPE);
+				Direction facing = state.getValue(StairBlock.FACING);
+				Half half = state.getValue(StairBlock.HALF);
+				StairsShape shape = state.getValue(StairBlock.SHAPE);
 				int yRot = (int) facing.getClockWise().toYRot();
 
 				if (shape == StairsShape.INNER_LEFT || shape == StairsShape.OUTER_LEFT)
@@ -67,7 +67,7 @@ public class BlocksStateGenerator extends BlockStateProvider
 				yRot %= 360;
 				boolean uvlock = yRot != 0 || half == Half.TOP;
 				return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? stairsModel : shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT ? stairsInner : stairsOuter).rotationX(half == Half.BOTTOM ? 0 : 180).rotationY(yRot).uvLock(uvlock).build();
-			}, StairsBlock.WATERLOGGED, block.getFluidLoggedProperty());
+			}, StairBlock.WATERLOGGED, block.getFluidLoggedProperty());
 		}
 
 	}

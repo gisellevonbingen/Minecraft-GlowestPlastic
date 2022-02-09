@@ -15,8 +15,8 @@ import mekanism.api.text.EnumColor;
 import mekanism.common.item.block.ItemBlockColoredName;
 import mekanism.common.registration.impl.BlockDeferredRegister;
 import mekanism.common.registration.impl.BlockRegistryObject;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 public class GlowestPlasticBlocks
@@ -48,7 +48,7 @@ public class GlowestPlasticBlocks
 
 	}
 
-	public static BlockRegistryObject<BlockPlasticSlab, ItemBlockColoredName> registerPlasticSlab(EnumColor color, String blockTypeSuffix, UnaryOperator<AbstractBlock.Properties> propertyModifier)
+	public static BlockRegistryObject<BlockPlasticSlab, ItemBlockColoredName> registerPlasticSlab(EnumColor color, String blockTypeSuffix, UnaryOperator<BlockBehaviour.Properties> propertyModifier)
 	{
 		return registerColoredBlock(c -> new BlockPlasticSlab(c, propertyModifier), blockTypeSuffix, color);
 	}
@@ -58,7 +58,7 @@ public class GlowestPlasticBlocks
 		return registerPlasticSlab(color, "_plastic_glow_slab", properties -> properties.lightLevel(state -> lightLevel));
 	}
 
-	public static BlockRegistryObject<BlockPlasticStairs, ItemBlockColoredName> registerPlasticStairs(IBlockProvider baseBlock, EnumColor color, String blockTypeSuffix, UnaryOperator<AbstractBlock.Properties> propertyModifier)
+	public static BlockRegistryObject<BlockPlasticStairs, ItemBlockColoredName> registerPlasticStairs(IBlockProvider baseBlock, EnumColor color, String blockTypeSuffix, UnaryOperator<BlockBehaviour.Properties> propertyModifier)
 	{
 		return registerColoredBlock(c -> new BlockPlasticStairs(baseBlock, c, propertyModifier), blockTypeSuffix, color);
 	}
@@ -73,7 +73,7 @@ public class GlowestPlasticBlocks
 		return registerPlastic(color, "_plastic_glowest", properties -> properties.strength(5.0F, 6.0F).lightLevel(state -> lightLevel));
 	}
 
-	public static BlockRegistryObject<BlockPlastic, ItemBlockColoredName> registerPlastic(EnumColor color, String blockTypeSuffix, UnaryOperator<AbstractBlock.Properties> propertyModifier)
+	public static BlockRegistryObject<BlockPlastic, ItemBlockColoredName> registerPlastic(EnumColor color, String blockTypeSuffix, UnaryOperator<BlockBehaviour.Properties> propertyModifier)
 	{
 		return registerColoredBlock(c -> new BlockPlastic(c, propertyModifier), blockTypeSuffix, color);
 	}

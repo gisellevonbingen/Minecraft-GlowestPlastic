@@ -10,11 +10,11 @@ import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class ShapelessRecipeBuilder
 {
@@ -103,7 +103,7 @@ public class ShapelessRecipeBuilder
 		return this.ingredients;
 	}
 
-	public static class Result implements IFinishedRecipe
+	public static class Result implements FinishedRecipe
 	{
 		private final ResourceLocation id;
 		private final String group;
@@ -174,9 +174,9 @@ public class ShapelessRecipeBuilder
 			return Lists.newArrayList(this.ingredients);
 		}
 
-		public IRecipeSerializer<?> getType()
+		public RecipeSerializer<?> getType()
 		{
-			return IRecipeSerializer.SHAPELESS_RECIPE;
+			return RecipeSerializer.SHAPELESS_RECIPE;
 		}
 
 		@Nullable

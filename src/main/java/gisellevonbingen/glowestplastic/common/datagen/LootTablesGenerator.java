@@ -11,13 +11,13 @@ import com.mojang.datafixers.util.Pair;
 
 import gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.LootTableProvider;
-import net.minecraft.loot.LootParameterSet;
-import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTable.Builder;
-import net.minecraft.loot.ValidationTracker;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTable.Builder;
+import net.minecraft.world.level.storage.loot.ValidationContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 public class LootTablesGenerator extends LootTableProvider
 {
@@ -31,18 +31,18 @@ public class LootTablesGenerator extends LootTableProvider
 	{
 		return super.getName() + ":" + GlowestPlastic.MODID;
 	}
-
+	
 	@Override
-	protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables()
+	protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootContextParamSet>> getTables()
 	{
-		List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> list = new ArrayList<>();
-		list.add(Pair.of(BlockLootTables::new, LootParameterSets.BLOCK));
+		List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootContextParamSet>> list = new ArrayList<>();
+		list.add(Pair.of(BlockLootTables::new, LootContextParamSets.BLOCK));
 
 		return list;
 	}
 
 	@Override
-	protected void validate(Map<ResourceLocation, LootTable> p_validate_1_, ValidationTracker p_validate_2_)
+	protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker)
 	{
 
 	}

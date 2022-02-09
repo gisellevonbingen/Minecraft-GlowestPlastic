@@ -12,11 +12,11 @@ import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class ShapedRecipeBuilder
 {
@@ -123,9 +123,9 @@ public class ShapedRecipeBuilder
 		return this;
 	}
 
-	public IRecipeSerializer<?> getType()
+	public RecipeSerializer<?> getType()
 	{
-		return (IRecipeSerializer<?>) IRecipeSerializer.SHAPED_RECIPE;
+		return RecipeSerializer.SHAPED_RECIPE;
 	}
 
 	public Result getResult()
@@ -133,7 +133,7 @@ public class ShapedRecipeBuilder
 		return new Result(this);
 	}
 
-	public static class Result implements IFinishedRecipe
+	public static class Result implements FinishedRecipe
 	{
 		private final ResourceLocation id;
 		private final String group;
@@ -141,7 +141,7 @@ public class ShapedRecipeBuilder
 		private final int count;
 		private final List<String> patterns;
 		private final Map<Character, Ingredient> keys;
-		private final IRecipeSerializer<?> type;
+		private final RecipeSerializer<?> type;
 
 		public Result(ShapedRecipeBuilder builder)
 		{
@@ -221,7 +221,7 @@ public class ShapedRecipeBuilder
 			return Maps.newHashMap(this.keys);
 		}
 
-		public IRecipeSerializer<?> getType()
+		public RecipeSerializer<?> getType()
 		{
 			return this.type;
 		}

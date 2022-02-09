@@ -5,10 +5,10 @@ import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 import mekanism.additions.common.AdditionsTags;
 import mekanism.api.text.EnumColor;
-import net.minecraft.block.Block;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class BlocksTagGenerator extends BlockTagsProvider

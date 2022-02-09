@@ -1,12 +1,12 @@
 package gisellevonbingen.glowestplastic.common.tag;
 
 import gisellevonbingen.glowestplastic.common.GlowestPlastic;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ITag.INamedTag;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.Tag.Named;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public class GlowestPlasticTags
 {
@@ -16,16 +16,16 @@ public class GlowestPlasticTags
 
 	public static class Blocks
 	{
-		public static final INamedTag<Block> PLASTIC_BLOCKS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_BLOCKS_GLOWEST);
-		public static final INamedTag<Block> PLASTIC_STAIRS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_STAIRS_GLOWEST);
-		public static final INamedTag<Block> PLASTIC_SLABS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_SLABS_GLOWEST);
+		public static final Named<Block> PLASTIC_BLOCKS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_BLOCKS_GLOWEST);
+		public static final Named<Block> PLASTIC_STAIRS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_STAIRS_GLOWEST);
+		public static final Named<Block> PLASTIC_SLABS_GLOWEST = BlockTags.bind(GlowestPlasticTags.PLASTIC_SLABS_GLOWEST);
 	}
 
 	public static class Items
 	{
-		public static final INamedTag<Item> PLASTIC_BLOCKS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_BLOCKS_GLOWEST);
-		public static final INamedTag<Item> PLASTIC_STAIRS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_STAIRS_GLOWEST);
-		public static final INamedTag<Item> PLASTIC_SLABS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_SLABS_GLOWEST);
+		public static final Named<Item> PLASTIC_BLOCKS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_BLOCKS_GLOWEST);
+		public static final Named<Item> PLASTIC_STAIRS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_STAIRS_GLOWEST);
+		public static final Named<Item> PLASTIC_SLABS_GLOWEST = ItemTags.bind(GlowestPlasticTags.PLASTIC_SLABS_GLOWEST);
 	}
 
 }
