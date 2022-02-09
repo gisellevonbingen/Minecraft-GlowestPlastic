@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import com.google.common.base.Function;
 
+import mekanism.api.providers.IBlockProvider;
 import mekanism.common.registration.impl.BlockRegistryObject;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -23,7 +24,7 @@ public class BlockLootTables extends net.minecraft.data.loot.BlockLootTables
 	{
 		this.dropSelf(GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.values());
 		this.dropSelf(GlowestPlasticBlocks.PLASTIC_GLOWEST_STAIRS.values());
-		this.add(GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.values(), b -> BlockLootTables.createSlabItemTable(b));
+		this.add(GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.values(), BlockLootTables::createSlabItemTable);
 	}
 
 	public <B extends Block, I extends Item> void dropSelf(Collection<BlockRegistryObject<B, I>> blocks)
@@ -47,7 +48,7 @@ public class BlockLootTables extends net.minecraft.data.loot.BlockLootTables
 	@Override
 	protected Iterable<Block> getKnownBlocks()
 	{
-		return GlowestPlasticBlocks.BLOCKS.getAllBlocks().stream().map(b -> b.getBlock()).collect(Collectors.toList());
+		return GlowestPlasticBlocks.BLOCKS.getAllBlocks().stream().map(IBlockProvider::getBlock).collect(Collectors.toList());
 	}
 
 }

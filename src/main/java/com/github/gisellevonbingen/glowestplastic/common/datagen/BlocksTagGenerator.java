@@ -4,10 +4,12 @@ import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.github.gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 
+import mekanism.additions.common.AdditionsTags;
 import mekanism.api.text.EnumColor;
 import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class BlocksTagGenerator extends BlockTagsProvider
@@ -33,7 +35,7 @@ public class BlocksTagGenerator extends BlockTagsProvider
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST).add(block);
 		}
 
-		this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS).addTag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST);
+		this.tag(AdditionsTags.Blocks.PLASTIC_BLOCKS).addTag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST);
 	}
 
 	public void tagPlasticGlowestStairs()
@@ -44,7 +46,7 @@ public class BlocksTagGenerator extends BlockTagsProvider
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST).add(block);
 		}
 
-		this.tag(GlowestPlasticTags.Blocks.STAIRS).addTag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST);
+		this.tag(BlockTags.STAIRS).addTag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST);
 	}
 
 	public void tagPlasticGlowestSlabs()
@@ -55,7 +57,7 @@ public class BlocksTagGenerator extends BlockTagsProvider
 			this.tag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST).add(block);
 		}
 
-		this.tag(GlowestPlasticTags.Blocks.SLABS).addTag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST);
+		this.tag(BlockTags.SLABS).addTag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST);
 	}
 
 }

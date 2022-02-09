@@ -29,7 +29,6 @@ public class DataGenerators
 
 		if (event.includeClient())
 		{
-			generator.addProvider(new BlocksModelGenerator(generator, existingFileHelper));
 			generator.addProvider(new BlocksStateGenerator(generator, existingFileHelper));
 			generator.addProvider(new ItemsModelGenerator(generator, existingFileHelper));
 		}

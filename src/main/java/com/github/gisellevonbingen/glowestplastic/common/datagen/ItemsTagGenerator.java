@@ -3,9 +3,12 @@ package com.github.gisellevonbingen.glowestplastic.common.datagen;
 import com.github.gisellevonbingen.glowestplastic.common.GlowestPlastic;
 import com.github.gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 
+import mekanism.additions.common.AdditionsTags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ItemsTagGenerator extends ItemTagsProvider
@@ -19,13 +22,13 @@ public class ItemsTagGenerator extends ItemTagsProvider
 	protected void addTags()
 	{
 		this.copy(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST, GlowestPlasticTags.Items.PLASTIC_BLOCKS_GLOWEST);
-		this.copy(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS, GlowestPlasticTags.Items.PLASTIC_BLOCKS);
+		this.copy(AdditionsTags.Blocks.PLASTIC_BLOCKS, AdditionsTags.Items.PLASTIC_BLOCKS);
 
-		this.copy(GlowestPlasticTags.Blocks.STAIRS, GlowestPlasticTags.Items.STAIRS);
 		this.copy(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST, GlowestPlasticTags.Items.PLASTIC_STAIRS_GLOWEST);
+		this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
 
 		this.copy(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST, GlowestPlasticTags.Items.PLASTIC_SLABS_GLOWEST);
-		this.copy(GlowestPlasticTags.Blocks.SLABS, GlowestPlasticTags.Items.SLABS);
+		this.copy(BlockTags.SLABS, ItemTags.SLABS);
 	}
 
 }
