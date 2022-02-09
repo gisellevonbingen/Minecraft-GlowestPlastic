@@ -8,6 +8,7 @@ import mekanism.api.text.EnumColor;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.Tag.Named;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -28,35 +29,44 @@ public class BlocksTagGenerator extends BlockTagsProvider
 
 	public void tagPlasictGlowestBlocks()
 	{
+		Named<Block> tag = GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST;
+		
 		for (EnumColor color : EnumColor.values())
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_BLOCKS.get(color).getBlock();
-			this.tag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST).add(block);
+			this.tag(tag).add(block);
 		}
 
-		this.tag(AdditionsTags.Blocks.PLASTIC_BLOCKS).addTag(GlowestPlasticTags.Blocks.PLASTIC_BLOCKS_GLOWEST);
+		this.tag(AdditionsTags.Blocks.PLASTIC_BLOCKS).addTag(tag);
+		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).addTag(tag);
 	}
 
 	public void tagPlasticGlowestStairs()
 	{
+		Named<Block> tag = GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST;
+		
 		for (EnumColor color : EnumColor.values())
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_STAIRS.get(color).getBlock();
-			this.tag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST).add(block);
+			this.tag(tag).add(block);
 		}
 
-		this.tag(BlockTags.STAIRS).addTag(GlowestPlasticTags.Blocks.PLASTIC_STAIRS_GLOWEST);
+		this.tag(BlockTags.STAIRS).addTag(tag);
+		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).addTag(tag);
 	}
 
 	public void tagPlasticGlowestSlabs()
 	{
+		Named<Block> tag = GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST;
+		
 		for (EnumColor color : EnumColor.values())
 		{
 			Block block = GlowestPlasticBlocks.PLASTIC_GLOWEST_SLABS.get(color).getBlock();
-			this.tag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST).add(block);
+			this.tag(tag).add(block);
 		}
 
-		this.tag(BlockTags.SLABS).addTag(GlowestPlasticTags.Blocks.PLASTIC_SLABS_GLOWEST);
+		this.tag(BlockTags.SLABS).addTag(tag);
+		this.tag(BlockTags.MINEABLE_WITH_PICKAXE).addTag(tag);
 	}
 
 }

@@ -281,6 +281,7 @@ be6b11f040ed0bb92dd0d521c2b616956c6564bb data/glowestplastic/recipes/plastic/sta
 7cf8a4d65ff0d0f602101ac71949a055c3ca347c data/glowestplastic/tags/items/plastic_blocks/glowest.json
 bb47205098e3e3e72f5e5344eae0bcb1e7f9a685 data/mekanismadditions/tags/blocks/plastic_blocks.json
 bb47205098e3e3e72f5e5344eae0bcb1e7f9a685 data/mekanismadditions/tags/items/plastic_blocks.json
+8b5f91f65b7491dc67e9dbd3b1c2be025aa38718 data/minecraft/tags/blocks/mineable/pickaxe.json
 28f9e4430f1196d5af70b764fad97fdc29c741eb data/minecraft/tags/blocks/slabs.json
 32dc2f16b7e801cccccb60b96ba96630a8032ccf data/minecraft/tags/blocks/stairs.json
 28f9e4430f1196d5af70b764fad97fdc29c741eb data/minecraft/tags/items/slabs.json
