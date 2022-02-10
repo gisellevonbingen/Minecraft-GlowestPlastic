@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:pigment_extracting",
+  "input": {
+    "ingredient": {
+      "item": "glowestplastic:light_gray_plastic_glowest"
+    }
+  },
+  "output": {
+    "pigment": "mekanism:light_gray",
+    "amount": 42
+  }
+}

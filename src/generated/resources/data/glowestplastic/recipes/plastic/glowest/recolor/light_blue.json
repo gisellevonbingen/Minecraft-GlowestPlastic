@@ -10,7 +10,13 @@
       "tag": "forge:dyes/light_blue"
     },
     "#": {
-      "tag": "glowestplastic:plastic_blocks/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "glowestplastic:plastic_blocks/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:light_blue_plastic_glowest"
+      }
     }
   },
   "result": {

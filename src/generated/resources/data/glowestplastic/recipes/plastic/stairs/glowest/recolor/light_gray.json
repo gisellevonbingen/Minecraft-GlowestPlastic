@@ -10,7 +10,13 @@
       "tag": "forge:dyes/light_gray"
     },
     "#": {
-      "tag": "forge:stairs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:stairs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:light_gray_plastic_glow_stairs"
+      }
     }
   },
   "result": {

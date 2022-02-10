@@ -10,7 +10,13 @@
       "tag": "forge:dyes/green"
     },
     "#": {
-      "tag": "forge:slabs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:slabs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:green_plastic_glow_slab"
+      }
     }
   },
   "result": {
