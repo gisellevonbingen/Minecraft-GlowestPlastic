@@ -10,7 +10,13 @@
       "tag": "forge:dyes/yellow"
     },
     "#": {
-      "tag": "forge:stairs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:stairs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:yellow_plastic_glow_stairs"
+      }
     }
   },
   "result": {

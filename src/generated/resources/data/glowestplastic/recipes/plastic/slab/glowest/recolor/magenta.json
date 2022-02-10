@@ -10,7 +10,13 @@
       "tag": "forge:dyes/magenta"
     },
     "#": {
-      "tag": "forge:slabs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:slabs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:magenta_plastic_glow_slab"
+      }
     }
   },
   "result": {
