@@ -125,7 +125,7 @@ public class ShapedRecipeBuilder
 
 	public IRecipeSerializer<?> getType()
 	{
-		return (IRecipeSerializer<?>) IRecipeSerializer.SHAPED_RECIPE;
+		return IRecipeSerializer.SHAPED_RECIPE;
 	}
 
 	public Result getResult()
