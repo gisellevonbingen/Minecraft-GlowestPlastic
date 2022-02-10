@@ -1,4 +1,4 @@
-package gisellevonbingen.glowestplastic.common.datagen;
+package gisellevonbingen.glowestplastic.common.datagen.recipe;
 
 import java.util.function.Consumer;
 
@@ -7,6 +7,7 @@ import gisellevonbingen.glowestplastic.common.block.GlowestPlasticBlocks;
 import gisellevonbingen.glowestplastic.common.tag.GlowestPlasticTags;
 import mekanism.additions.common.MekanismAdditions;
 import mekanism.api.text.EnumColor;
+import mekanism.common.recipe.ingredient.IngredientWithout;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -19,13 +20,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class RecipesGenerator extends RecipeProvider
+public class CraftingRecipesGenerator extends RecipeProvider
 {
-	public RecipesGenerator(DataGenerator generator)
+	public CraftingRecipesGenerator(DataGenerator generator)
 	{
 		super(generator);
 	}
-
+	
 	@Override
 	protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
 	{
@@ -92,7 +93,7 @@ public class RecipesGenerator extends RecipeProvider
 	{
 		ShapedRecipeBuilder builder = new ShapedRecipeBuilder(this.getRecipeName(namePrefix + "recolor/" + color.getRegistryPrefix()));
 		builder.addPattern(" # ", "#D#", " # ");
-		builder.addKey('#', Ingredient.of(tagInput));
+		builder.addKey('#', IngredientWithout.create(tagInput, itemOutput));
 		builder.addKey('D', Ingredient.of(color.getDyeColor().getTag()));
 		builder.setOutput(itemOutput, 4);
 		consumer.accept(builder.getResult());

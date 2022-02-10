@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:pigment_extracting",
+  "input": {
+    "ingredient": {
+      "item": "glowestplastic:pink_plastic_glowest"
+    }
+  },
+  "output": {
+    "pigment": "mekanism:pink",
+    "amount": 42
+  }
+}

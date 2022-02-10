@@ -10,7 +10,13 @@
       "tag": "forge:dyes/brown"
     },
     "#": {
-      "tag": "glowestplastic:plastic_blocks/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "glowestplastic:plastic_blocks/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:brown_plastic_glowest"
+      }
     }
   },
   "result": {

@@ -1,0 +1,21 @@
+{
+  "type": "mekanism:painting",
+  "itemInput": {
+    "ingredient": {
+      "type": "mekanism:without",
+      "base": {
+        "tag": "glowestplastic:plastic_blocks/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:light_blue_plastic_glowest"
+      }
+    }
+  },
+  "chemicalInput": {
+    "amount": 64,
+    "pigment": "mekanism:light_blue"
+  },
+  "output": {
+    "item": "glowestplastic:light_blue_plastic_glowest"
+  }
+}

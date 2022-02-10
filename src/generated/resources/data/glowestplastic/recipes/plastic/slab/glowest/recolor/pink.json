@@ -10,7 +10,13 @@
       "tag": "forge:dyes/pink"
     },
     "#": {
-      "tag": "forge:slabs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:slabs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:pink_plastic_glow_slab"
+      }
     }
   },
   "result": {

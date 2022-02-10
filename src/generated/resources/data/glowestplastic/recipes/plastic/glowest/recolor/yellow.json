@@ -10,7 +10,13 @@
       "tag": "forge:dyes/yellow"
     },
     "#": {
-      "tag": "glowestplastic:plastic_blocks/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "glowestplastic:plastic_blocks/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:yellow_plastic_glowest"
+      }
     }
   },
   "result": {

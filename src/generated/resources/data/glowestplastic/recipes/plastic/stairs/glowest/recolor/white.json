@@ -10,7 +10,13 @@
       "tag": "forge:dyes/white"
     },
     "#": {
-      "tag": "forge:stairs/plastic/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:stairs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:white_plastic_glow_stairs"
+      }
     }
   },
   "result": {
