@@ -1,11 +1,8 @@
 # Glowest Plastic
 Add glow plastic blocks(stairs, slabs) that's light level is 15
 
-## Require Mekanism, Mekanism Additions version 1.16.5-10.0.20.447 or higher is required
-
-https://www.curseforge.com/minecraft/mc-mods/mekanism
-
-https://www.curseforge.com/minecraft/mc-mods/mekanism-additions
+* 1.16.5 - https://github.com/gisellevonbingen/Minecraft-GlowestPlastic/tree/1.16
+* 1.18.1 - https://github.com/gisellevonbingen/Minecraft-GlowestPlastic/tree/1.18
 
 # Licence
 
