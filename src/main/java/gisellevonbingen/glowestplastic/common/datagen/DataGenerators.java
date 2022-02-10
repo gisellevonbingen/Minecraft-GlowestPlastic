@@ -2,6 +2,8 @@ package gisellevonbingen.glowestplastic.common.datagen;
 
 import java.util.HashSet;
 
+import gisellevonbingen.glowestplastic.common.datagen.recipe.CraftingRecipesGenerator;
+import gisellevonbingen.glowestplastic.common.datagen.recipe.PigmentRecipesGenerator;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,7 +24,8 @@ public class DataGenerators
 			BlocksTagGenerator blocksTagGenerator = new BlocksTagGenerator(generator, existingFileHelper);
 			generator.addProvider(blocksTagGenerator);
 			generator.addProvider(new ItemsTagGenerator(generator, blocksTagGenerator, existingFileHelper));
-			generator.addProvider(new RecipesGenerator(generator));
+			generator.addProvider(new CraftingRecipesGenerator(generator));
+			generator.addProvider(new PigmentRecipesGenerator(generator));
 			generator.addProvider(new LootTablesGenerator(generator));
 			generator.addProvider(new LanguagesGenerator(generator));
 		}

@@ -1,0 +1,21 @@
+{
+  "type": "mekanism:painting",
+  "itemInput": {
+    "ingredient": {
+      "type": "mekanism:without",
+      "base": {
+        "tag": "forge:stairs/plastic/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:red_plastic_glow_stairs"
+      }
+    }
+  },
+  "chemicalInput": {
+    "amount": 64,
+    "pigment": "mekanism:red"
+  },
+  "output": {
+    "item": "glowestplastic:red_plastic_glow_stairs"
+  }
+}

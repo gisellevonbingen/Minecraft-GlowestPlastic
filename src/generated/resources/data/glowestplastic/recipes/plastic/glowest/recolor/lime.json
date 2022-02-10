@@ -10,7 +10,13 @@
       "tag": "forge:dyes/lime"
     },
     "#": {
-      "tag": "glowestplastic:plastic_blocks/glowest"
+      "type": "mekanism:without",
+      "base": {
+        "tag": "glowestplastic:plastic_blocks/glowest"
+      },
+      "without": {
+        "item": "glowestplastic:lime_plastic_glowest"
+      }
     }
   },
   "result": {
