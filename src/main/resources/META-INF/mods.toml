@@ -30,7 +30,7 @@ Add glow plastic blocks(stairs, slabs) that's light level is 15
     side="BOTH"
 [[dependencies.glowestplastic]]
     modId="mekanismadditions"
-    versionRange="[10.0.20,)"
+    versionRange="[10.1.1,)"
     mandatory=true
     ordering="AFTER"
     side="BOTH"
