@@ -1,36 +1,41 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="MIT License"
+license="MIT"
+issueTrackerURL="https://github.com/gisellevonbingen/Minecraft-GlowestPlastic/issues"
+
 [[mods]]
-modId="glowestplastic"
-version="${file.jarVersion}"
-displayName="Glowest Plastic"
-credits="gisellevonbingen"
-authors="gisellevonbingen"
-description='''
-Add glow plastic blocks(stairs, slabs) that's light level is 15
-'''
+    modId="glowestplastic"
+    version="${file.jarVersion}"
+    displayName="Glowest Plastic"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/glowest-plastic"
+    authors="gisellevonbingen"
+    description='''Add glow plastic blocks(stairs, slabs) that's light level is 15'''
+    itemIcon="glowestplastic:white_plastic_glow_stairs" #for Catalogue
+
 [[dependencies.glowestplastic]]
     modId="forge"
     mandatory=true
     versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.glowestplastic]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.glowestplastic]]
     modId="mekanism"
     mandatory=true
     versionRange="[10.1.1,)"
     ordering="AFTER"
     side="BOTH"
+
 [[dependencies.glowestplastic]]
     modId="mekanismadditions"
-    versionRange="[10.1.1,)"
     mandatory=true
+    versionRange="[10.1.1,)"
     ordering="AFTER"
     side="BOTH"
